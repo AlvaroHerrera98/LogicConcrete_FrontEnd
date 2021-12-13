@@ -5,6 +5,7 @@ import { OrderCreate } from '../modals/create/orderCreate'
 import OrderEdit from '../admin/edit/orderedit'
 import Delete from './delete/delete'
 //Material-UI 
+import CssBaseline from '@mui/material/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
@@ -127,6 +128,7 @@ const OrderDetail = (props) => {
 	if (!allOrders || allOrders.length === 0) return <p>La informacion solicitada no fue encontrada, lo sentimos</p>;
 	return (
 		<React.Fragment>
+			<CssBaseline />
 			<Box mt={3}>
 				<Container maxWidth="md" component="main">
 				<Paper className={classes.root}>

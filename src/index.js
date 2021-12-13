@@ -15,6 +15,7 @@ import Employees from './components/pages/employees';
 import Vehicule from './components/pages/vehicules';
 import Mixture from './components/pages/mixtures';
 import ClientEdit from './components/admin/edit/clientedit';
+import Interface from './components/admin/mixer/interface'
 
 
 const routing = (
@@ -28,6 +29,7 @@ const routing = (
         <Route path = "/main/vehicules" component={Vehicule}/>
         <Route path = "/main/mixtures" component={Mixture}/>
         <Route path = "/main/client/edit/:id"component={ClientEdit}/>
+        <Route path = "/interface" component={Interface}/>
         <Route path="/App" component={App} />
         <Route path="/register" component={Register} />
         <Route path="/logout" component={Logout} />

@@ -29,6 +29,7 @@ function PageNavBar () {
                     <Link to='#' className='menu-bars'>
                         <MuiIcon.Close sx={{color:'#fff'}} />
                     </Link>
+                    <h3 className="ml white">Logic Concrete</h3>
                 </li>
                 {SidebarData.map((item, index) => {
                     return (

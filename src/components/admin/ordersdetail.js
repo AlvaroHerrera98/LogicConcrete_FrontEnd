@@ -163,7 +163,7 @@ const OrderDetail = (props) => {
 											</TableCell>
 
                                             <TableCell align="left">
-												{orders.measure}
+												{orders.measure} M³
 											</TableCell>
 
                                             <TableCell align="left">

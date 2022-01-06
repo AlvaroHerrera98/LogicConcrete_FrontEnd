@@ -70,11 +70,13 @@ export default function ClientEdit({open, onClose, clientId, formData, updateFor
 			email: formData.email,
 			company: formData.company,
 			
+		}).then(()=> {
+			history.push({
+				pathname: '/main/clients/',
+			});
+			 window.location.reload();
 		});
-		history.push({
-			pathname: '/main/clients/',
-		});
-		window.location.reload();
+		
 	};
 
 	const classes = useStyles();
@@ -92,7 +94,7 @@ export default function ClientEdit({open, onClose, clientId, formData, updateFor
 			<CssBaseline />
 			<div className={classes.paper}>
 				<Typography component="h1" variant="h5">
-					Modificacion de Cliente
+				Modificación de Cliente
 				</Typography>
 				<form className={classes.form} noValidate>
 					<Grid container spacing={2}>

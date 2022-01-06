@@ -101,7 +101,7 @@ export default function EmployeeEdit ({open, setOpen, employeeId, formData , upd
 			<CssBaseline />
 			<div className={classes.paper}>
 				<Typography component="h1" variant="h5">
-					Modificacion de Empleado
+				Modificación de Empleado
 				</Typography>
 				<form className={classes.form} noValidate>
 					<Grid container spacing={2}>

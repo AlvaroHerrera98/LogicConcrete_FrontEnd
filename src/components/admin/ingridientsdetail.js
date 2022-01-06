@@ -89,26 +89,26 @@ const IngridientsDetail = (props) => {
 										<TableRow className={classes.tableRow} key= {ingridients.id}>
 
 											<TableCell align="center">
-												{ingridients.agua}
+												{ingridients.agua} kg/m³
 											</TableCell>
 
                                             <TableCell align="center">
-												{ingridients.arena}
+												{ingridients.arena} kg/m³
 											</TableCell>
 
                                             <TableCell align="center">
-												{ingridients.grava}
+												{ingridients.grava} kg/m³
 											</TableCell>
 
                                             <TableCell align="center">
-												{ingridients.cemento}
+												{ingridients.cemento} kg/m³
 											</TableCell>
 
                                             <TableCell align="center">
-												{ingridients.aditivo}
+												{ingridients.aditivo} kg/m³
 											</TableCell>
 
-											<TableCell align="center">
+											{/* <TableCell align="center">
 												<Link
 													color="textPrimary"
 													href='#'
@@ -116,7 +116,7 @@ const IngridientsDetail = (props) => {
 												>
 													<EditIcon></EditIcon>
 												</Link>
-											</TableCell>
+											</TableCell> */}
 										</TableRow>
 									);
 								})}

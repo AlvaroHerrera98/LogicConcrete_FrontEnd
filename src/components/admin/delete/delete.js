@@ -18,10 +18,10 @@ export default function Delete({open, onClose, onDelete}) {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">{"Estas  Seguro que quieres eliminar a este Elemento ?"}</DialogTitle>
+          <DialogTitle id="alert-dialog-title">{"Estas  seguro que quieres eliminar a este elemento ?"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              Al confirmar estara eliminando este Elemento.
+              Al confirmar estara eliminando este elemento.
             </DialogContentText>
           </DialogContent>
           <DialogActions>

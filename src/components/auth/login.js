@@ -106,14 +106,6 @@ export default function Login() {
               Iniciar Sesion
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Link 
-                    style={{textDecoration: 'none'}}
-                    href="#" 
-                    variant="body2">
-                  Olvidaste tu Contraseña?
-                </Link>
-              </Grid>
               <Grid item>
                 <Link 
                     style={{textDecoration: 'none'}}

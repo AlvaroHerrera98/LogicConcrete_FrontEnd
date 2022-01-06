@@ -9,14 +9,14 @@ import Container from '@material-ui/core/Container';
 
 
 
-export default function Interface({allOrders, allVehicules}) {
+export default function Interface({allOrders, allVehicules, onStartProduction}) {
 
   
 
   return (
     <React.Fragment>
     <Container style={{display:'flex', flexDirection:'row', alignContent:'flex-end'}}>
-        <Actions/>
+        <Actions onStartProduction={onStartProduction}/>
 		    <OrderSelect allOrders={allOrders} allVehicules={allVehicules}/>
     </Container>
     </React.Fragment>

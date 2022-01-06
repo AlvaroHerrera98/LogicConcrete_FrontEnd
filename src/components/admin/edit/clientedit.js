@@ -100,7 +100,7 @@ export default function Edit() {
 			<CssBaseline />
 			<div className={classes.paper}>
 				<Typography component="h1" variant="h5">
-					Modificacion de Cliente
+				Modificación de Cliente
 				</Typography>
 				<form className={classes.form} noValidate>
 					<Grid container spacing={2}>

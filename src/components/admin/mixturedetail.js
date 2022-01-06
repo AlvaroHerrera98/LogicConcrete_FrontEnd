@@ -150,23 +150,23 @@ const MixtureDetail = (props) => {
                                             </TableCell>
 
 											<TableCell align="left">
-												{mixtures.agua}
+												{mixtures.agua} %
 											</TableCell>
 
                                             <TableCell align="left">
-												{mixtures.arena}
+												{mixtures.arena} %
 											</TableCell>
 
                                             <TableCell align="left">
-												{mixtures.grava}
+												{mixtures.grava} %
 											</TableCell>
 
                                             <TableCell align="left">
-												{mixtures.cemento}
+												{mixtures.cemento} %
 											</TableCell>
 
                                             <TableCell align="left">
-												{mixtures.aditivo}
+												{mixtures.aditivo} %
 											</TableCell>
 
 											<TableCell align="left">

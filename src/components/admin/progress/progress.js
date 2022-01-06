@@ -1,88 +1,72 @@
-import React,  { useState, useEffect }  from "react";
-import Container from '@material-ui/core/Container';
-import './progressbar.css'
-import ProgressBar from 'react-customizable-progressbar'
-import Interface from '../mixer/interface'
+import React, { useState, useEffect } from "react";
+import Container from "@material-ui/core/Container";
+import "./progressbar.css";
+import ProgressBar from "react-customizable-progressbar";
 
-export default function Progress(props) {
+export default function Progress({ delay, isEnabled, onFinish, reset }) {
+  const [value, setValue] = useState(0);
+  const [isStarted, setIsStarted] = useState(false);
 
-  const [value, setValue] = useState(0)
+  useEffect(() => {
+    if (!isEnabled) return;
+    setValue(0);
+    setTimeout(() => {
+      setIsStarted(true);
+    }, delay);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isEnabled]);
 
-  useEffect (()=>{
-    const interval = setInterval(() =>{
-      setValue( oldValue => {
-        const newValue = oldValue + 10;
+  useEffect(() => {
+    if (isEnabled) {
+      return;
+    } else {
+      setIsStarted(false);
+    }
+  }, [isEnabled]);
 
-        if (newValue === 100){
-          clearInterval(interval)
+  useEffect(()=>{
+    if(reset) {
+      return;
+    }else{
+      setValue(0)
+      setIsStarted(false)
+      
+    }
+  },[reset])
+
+  useEffect(() => {
+    if (!isStarted) {
+      return;
+    }
+    const interval = setInterval(() => {
+      setValue((oldValue) => {
+        const newValue = oldValue + 1;
+
+        if (newValue === 100) {
+          clearInterval(interval);
+          onFinish?.();
         }
 
-        return newValue
-      })
-    }, 100)
-  },[])
+        return newValue;
+      });
+    }, 100);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isStarted]);
 
-  const { allOrders } = props;
-  const { allVehicules } = props;
 
 
   return (
     <>
-    <Container style={{display: "inline-flex"}}>
-    <ProgressBar
-        progress={value}
-        radius={100}
-        strokeColor="#c67649"
-      >
-        <div className="indicator">
-                <div><h2>{value}%</h2></div>
+      <Container style={{ display: "inline-flex" }}>
+        <ProgressBar progress={value} radius={100} strokeColor="#c67649">
+          <div className="indicator">
+            <div>
+              <h2>{value}%</h2>
             </div>
-      </ProgressBar>
-      <ProgressBar
-        progress={value}
-        radius={100}
-        strokeColor="#c67649"
-      >
-        <div className="indicator">
-          <div><h2>{value}%</h2></div>
-            </div>
-      </ProgressBar>
-      <ProgressBar
-        progress={value}
-        radius={100}
-        strokeColor="#c67649"
-      >
-        <div className="indicator">
-          <div><h2>{value}%</h2></div>
-            </div>
-      </ProgressBar>
-      <ProgressBar
-        progress={value}
-        radius={100}
-        strokeColor="#c67649"
-      >
-        <div className="indicator">
-          <div><h2>{value}%</h2></div>
-            </div>
-      </ProgressBar>
-      <ProgressBar
-        progress={value}
-        radius={100}
-        strokeColor="#c67649"
-      >
-        <div className="indicator">
-          <div><h2>{value}%</h2></div>
-            </div>
-      </ProgressBar>
-    </Container>
-    <Interface
-    allOrders={allOrders}
-    allVehicules={allVehicules}
-    />
+          </div>
+        </ProgressBar>
+      </Container>
     </>
   );
 }
 
-
-//style={{ width: 1100, display: "inline-flex", gap: "50px" }}
-//style={{ width: 180, display:'inline-flex' }}

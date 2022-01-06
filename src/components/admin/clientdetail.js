@@ -64,6 +64,8 @@ const Detail = (props) => {
 
 	const { allClients } = props;
 
+	const {setAppState} = props;
+
 	const [clientId, setClientId] = useState("");
 
 	const initialFormData = Object.freeze({
@@ -209,6 +211,7 @@ const Detail = (props) => {
 					initialFormData={initialFormData}
 					formData={formData}
 					updateFormData={updateFormData}
+					setAppState={setAppState}
 					/>
 					<Delete
 					open={deleteOpen}

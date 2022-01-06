@@ -101,7 +101,7 @@ export default function MixtureEdit ({open, setOpen, mixtureId, formData , updat
 			<CssBaseline />
 			<div className={classes.paper}>
 				<Typography component="h1" variant="h5">
-					Modificacion de Mezlcla
+				Modificación de Mezlcla
 				</Typography>
 				<form className={classes.form} noValidate>
 					<Grid container spacing={2}>

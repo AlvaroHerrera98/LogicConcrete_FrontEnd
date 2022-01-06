@@ -24,9 +24,9 @@ axiosInstance.interceptors.response.use(
 
         if (typeof error.response === 'undefined'){
             alert(
-                'A server/network error occured. ' +
-                    'Looks like CORS might be the problem.' +
-                    'Sorry about this we will get it fixed shortly.'
+                'Hubo problemas con la conexión al sevidor ' +
+                    'Puede haber problemas con CORS.' +
+                    'Lamentamos los incovenientes arreglaremos el problema pronto.'
             );
             return Promise.reject(error);
         }
